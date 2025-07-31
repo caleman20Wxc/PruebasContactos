@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -74,6 +74,20 @@
     .copy-phone:hover {
       color: #004080;
     }
+
+    #mensajeCopiado {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      display: none;
+      font-size: 14px;
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
@@ -98,6 +112,8 @@
     </table>
   </div>
 
+  <div id="mensajeCopiado">📋 Teléfono copiado al portapapeles</div>
+
   <script>
     const input = document.getElementById("searchInput");
 
@@ -116,7 +132,7 @@
         });
       });
 
-    // Filtro
+    // Buscar
     input.addEventListener("keyup", function () {
       const filter = input.value.toLowerCase();
       const rows = document.querySelectorAll("#contactTable tbody tr");
@@ -127,20 +143,23 @@
       });
     });
 
-    // Función para copiar al portapapeles
-    <script>
-  function copiarTelefono(numero) {
-    // Crear un campo de texto temporal
-    const inputTemp = document.createElement("input");
-    inputTemp.value = numero;
-    document.body.appendChild(inputTemp);
-    inputTemp.select();
-    inputTemp.setSelectionRange(0, 99999); // Para móviles
-    document.execCommand("copy");
-    document.body.removeChild(inputTemp);
+    // Función compatible para copiar y mostrar banner
+    function copiarTelefono(numero) {
+      const inputTemp = document.createElement("input");
+      inputTemp.value = numero;
+      document.body.appendChild(inputTemp);
+      inputTemp.select();
+      inputTemp.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      document.body.removeChild(inputTemp);
 
-    alert(`📋 Teléfono ${numero} copiado al portapapeles`);
-  }
+      // Mostrar mensaje visual
+      const mensaje = document.getElementById("mensajeCopiado");
+      mensaje.style.display = "block";
+      setTimeout(() => {
+        mensaje.style.display = "none";
+      }, 2000);
+    }
   </script>
 
 </body>
