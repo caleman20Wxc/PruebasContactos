@@ -128,11 +128,19 @@
     });
 
     // Función para copiar al portapapeles
-    function copiarTelefono(numero) {
-      navigator.clipboard.writeText(numero).then(() => {
-        alert(`📋 Teléfono ${numero} copiado al portapapeles`);
-      });
-    }
+    <script>
+  function copiarTelefono(numero) {
+    // Crear un campo de texto temporal
+    const inputTemp = document.createElement("input");
+    inputTemp.value = numero;
+    document.body.appendChild(inputTemp);
+    inputTemp.select();
+    inputTemp.setSelectionRange(0, 99999); // Para móviles
+    document.execCommand("copy");
+    document.body.removeChild(inputTemp);
+
+    alert(`📋 Teléfono ${numero} copiado al portapapeles`);
+  }
   </script>
 
 </body>
