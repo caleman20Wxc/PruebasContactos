@@ -8,22 +8,23 @@
       font-family: Arial, sans-serif;
       padding: 40px;
       background-color: #f5f5f5;
-      background-image: url('https://biupload.bi.com.gt/s/Sj5oMbc4FDEaCBo/preview');
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/61/Banco_Industrial_logo.png');
       background-repeat: no-repeat;
       background-position: top left;
-      background-size: 300px;
+      background-size: 150px;
       background-attachment: fixed;
     }
 
     h2 {
-      text-align: center;
       color: #222;
+      margin-left: 40px;
     }
 
     .search-box {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       margin-bottom: 20px;
+      margin-left: 40px;
     }
 
     input[type="text"] {
@@ -37,7 +38,7 @@
     .table-container {
       max-width: 500px;
       margin-left: 40px;
-      margin: auto;
+      margin-right: auto;
       background-color: rgba(255, 255, 255, 0.9);
       padding: 20px;
       border-radius: 10px;
@@ -63,6 +64,16 @@
     tr:nth-child(even) {
       background-color: #f0f0f0;
     }
+
+    .copy-phone {
+      color: #0066cc;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .copy-phone:hover {
+      color: #004080;
+    }
   </style>
 </head>
 <body>
@@ -82,7 +93,7 @@
         </tr>
       </thead>
       <tbody id="contactBody">
-        <!-- Aquí se insertan automáticamente las filas -->
+        <!-- Se insertan aquí los contactos -->
       </tbody>
     </table>
   </div>
@@ -90,7 +101,7 @@
   <script>
     const input = document.getElementById("searchInput");
 
-    // Cargar contactos desde el archivo JSON
+    // Cargar datos desde contactos.json
     fetch('contactos.json')
       .then(response => response.json())
       .then(data => {
@@ -99,13 +110,13 @@
           const tr = document.createElement("tr");
           tr.innerHTML = `
             <td>${contacto.nombre}</td>
-            <td>${contacto.telefono}</td>
+            <td><span class="copy-phone" onclick="copiarTelefono('${contacto.telefono}')">${contacto.telefono}</span></td>
           `;
           tbody.appendChild(tr);
         });
       });
 
-    // Filtro de búsqueda
+    // Filtro
     input.addEventListener("keyup", function () {
       const filter = input.value.toLowerCase();
       const rows = document.querySelectorAll("#contactTable tbody tr");
@@ -115,6 +126,13 @@
         row.style.display = text.includes(filter) ? "" : "none";
       });
     });
+
+    // Función para copiar al portapapeles
+    function copiarTelefono(numero) {
+      navigator.clipboard.writeText(numero).then(() => {
+        alert(`📋 Teléfono ${numero} copiado al portapapeles`);
+      });
+    }
   </script>
 
 </body>
