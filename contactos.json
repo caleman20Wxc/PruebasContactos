@@ -1,0 +1,1178 @@
+[
+  {
+    "nombre":"Del Centro",
+    "telefono":"24203000"
+  },
+  {
+    "nombre":"17 Calle",
+    "telefono":"22173550"
+  },
+  {
+    "nombre":"Comercial Portales",
+    "telefono":"24912150"
+  },
+  {
+    "nombre":"Plaza Zona 4",
+    "telefono":"24912100"
+  },
+  {
+    "nombre":"Centrico",
+    "telefono":"22312250"
+  },
+  {
+    "nombre":"Real Asunción",
+    "telefono":"24625950"
+  },
+  {
+    "nombre":"Bolívar",
+    "telefono":"25064950"
+  },
+  {
+    "nombre":"Santa Amelia",
+    "telefono":"25013400"
+  },
+  {
+    "nombre":"Calzada la Paz",
+    "telefono":"22447250"
+  },
+  {
+    "nombre":"Cascata",
+    "telefono":"22314900"
+  },
+  {
+    "nombre":"Centro San Isidro",
+    "telefono":"22143850"
+  },
+  {
+    "nombre":"Septima Avenida",
+    "telefono":"22895518"
+  },
+  {
+    "nombre":"Megaseis",
+    "telefono":"25065450"
+  },
+  {
+    "nombre":"Parroquia",
+    "telefono":"25013050"
+  },
+  {
+    "nombre":"Parroquia II",
+    "telefono":"25062100"
+  },
+  {
+    "nombre":"Plaza Varieta",
+    "telefono":"25009950"
+  },
+  {
+    "nombre":"Paseo Cayala",
+    "telefono":"22242300"
+  },
+  {
+    "nombre":"Atlantico",
+    "telefono":"22706150"
+  },
+  {
+    "nombre":"Walmart Del Norte",
+    "telefono":"25052950"
+  },
+  {
+    "nombre":"Metaterminal Del Norte",
+    "telefono":"22706400"
+  },
+  {
+    "nombre":"Plaza San Rafael",
+    "telefono":"25052300"
+  },
+  {
+    "nombre":"Plaza Los Olivos",
+    "telefono":"24622650"
+  },
+  {
+    "nombre":"Centra Norte",
+    "telefono":"25032250"
+  },
+  {
+    "nombre":"Palencia",
+    "telefono":"79574950"
+  },
+  {
+    "nombre":"Obelisco",
+    "telefono":"24199696"
+  },
+  {
+    "nombre":"Las Americas",
+    "telefono":"24987800"
+  },
+  {
+    "nombre":"Europlaza",
+    "telefono":"25066150"
+  },
+  {
+    "nombre":"Oakland Mall",
+    "telefono":"25013450"
+  },
+  {
+    "nombre":"Américas IV",
+    "telefono":"25014150"
+  },
+  {
+    "nombre":"WTC",
+    "telefono":"22251850"
+  },
+  {
+    "nombre":"Parque Las Americas",
+    "telefono":"22258950"
+  },
+  {
+    "nombre":"Interamericas",
+    "telefono":"22248950"
+  },
+  {
+    "nombre":"Avia",
+    "telefono":"22251800"
+  },
+  {
+    "nombre":"Plaza Futeca",
+    "telefono":"22705600"
+  },
+  {
+    "nombre":"Plaza la Decima",
+    "telefono":"24618900"
+  },
+  {
+    "nombre":"Los Proceres",
+    "telefono":"22100450"
+  },
+  {
+    "nombre":"Margaritas",
+    "telefono":"23393185"
+  },
+  {
+    "nombre":"Villa Magna",
+    "telefono":"25014100"
+  },
+  {
+    "nombre":"Plaza El Roble",
+    "telefono":"22173900"
+  },
+  {
+    "nombre":"Plaza Fontabella",
+    "telefono":"25013150"
+  },
+  {
+    "nombre":"Plaza La Estación",
+    "telefono":"22863900"
+  },
+  {
+    "nombre":"La Torre II",
+    "telefono":"25013300"
+  },
+  {
+    "nombre":"Montufar II",
+    "telefono":"22591350"
+  },
+  {
+    "nombre":"Vista Hermosa",
+    "telefono":"25015550"
+  },
+  {
+    "nombre":"Puerta Parada",
+    "telefono":"66636500"
+  },
+  {
+    "nombre":"Pradera",
+    "telefono":"25064900"
+  },
+  {
+    "nombre":"Escala Carretera",
+    "telefono":"66636600"
+  },
+  {
+    "nombre":"Spazio",
+    "telefono":"24618950"
+  },
+  {
+    "nombre":"Santa Catarina Pínula",
+    "telefono":"66646150"
+  },
+  {
+    "nombre":"Galerías La Pradera",
+    "telefono":"22705650"
+  },
+  {
+    "nombre":"Minuto Muxbal",
+    "telefono":"66646200"
+  },
+  {
+    "nombre":"Videre",
+    "telefono":"22166302"
+  },
+  {
+    "nombre":"Walmart Puerta Parada",
+    "telefono":"66713150"
+  },
+  {
+    "nombre":"Condado Concepcion",
+    "telefono":"66450950"
+  },
+  {
+    "nombre":"San Jose Pínula",
+    "telefono":"66613600"
+  },
+  {
+    "nombre":"Pinabetes",
+    "telefono":"66715100"
+  },
+  {
+    "nombre":"Pradera Concepcion",
+    "telefono":"66636450"
+  },
+  {
+    "nombre":"Plaza Madero Carretera",
+    "telefono":"66701150"
+  },
+  {
+    "nombre":"Comercial Fraijanes",
+    "telefono":"66636700"
+  },
+  {
+    "nombre":"Plaza Pínula",
+    "telefono":"66702400"
+  },
+  {
+    "nombre":"La Paz Carretera a El Salvador",
+    "telefono":"66707300"
+  },
+  {
+    "nombre":"Boca Del Monte",
+    "telefono":"22706050"
+  },
+  {
+    "nombre":"Los Alamos",
+    "telefono":"22181900"
+  },
+  {
+    "nombre":"Distrito Moran",
+    "telefono":"66718650"
+  },
+  {
+    "nombre":"Villa Canales",
+    "telefono":"66637350"
+  },
+  {
+    "nombre":"Paseo Villa Canales",
+    "telefono":"66651650"
+  },
+  {
+    "nombre":"Mixco",
+    "telefono":"25013350"
+  },
+  {
+    "nombre":"Montserrat",
+    "telefono":"24629900"
+  },
+  {
+    "nombre":"Plaza Florida",
+    "telefono":"25013100"
+  },
+  {
+    "nombre":"San Juan Sacatepequez",
+    "telefono":"66445950"
+  },
+  {
+    "nombre":"Plaza San Pedro",
+    "telefono":"66709150"
+  },
+  {
+    "nombre":"Walmart San Nicolás",
+    "telefono":"22174100"
+  },
+  {
+    "nombre":"Plaza San Nicolás",
+    "telefono":"22706250"
+  },
+  {
+    "nombre":"San Juan II",
+    "telefono":"22098750"
+  },
+  {
+    "nombre":"Naranjo Mall",
+    "telefono":"22172700"
+  },
+  {
+    "nombre":"Condado Naranjo",
+    "telefono":"22174150"
+  },
+  {
+    "nombre":"Arboreto San Nicolas",
+    "telefono":"22254450"
+  },
+  {
+    "nombre":"Megacentro",
+    "telefono":"25050450"
+  },
+  {
+    "nombre":"Central",
+    "telefono":"24203000"
+  },
+  {
+    "nombre":"La Terminal",
+    "telefono":"22057950"
+  },
+  {
+    "nombre":"Bancomatico Central",
+    "telefono":"24203000"
+  },
+  {
+    "nombre":"Comercial Atanasio",
+    "telefono":"22160200"
+  },
+  {
+    "nombre":"Plaza Atanasio Tzul",
+    "telefono":"22706450"
+  },
+  {
+    "nombre":"Terminal Sur",
+    "telefono":"25094550"
+  },
+  {
+    "nombre":"El Frutal",
+    "telefono":"66445900"
+  },
+  {
+    "nombre":"Comercial Petapa",
+    "telefono":"22134950"
+  },
+  {
+    "nombre":"Torre III",
+    "telefono":"24203000"
+  },
+  {
+    "nombre":"Plaza Madero Atanasio",
+    "telefono":"22254400"
+  },
+  {
+    "nombre":"El Cortijo",
+    "telefono":"25024950"
+  },
+  {
+    "nombre":"Nimajuyu",
+    "telefono":"22095200"
+  },
+  {
+    "nombre":"Pradera Vistares",
+    "telefono":"24255400"
+  },
+  {
+    "nombre":"Petapolis",
+    "telefono":"22379650"
+  },
+  {
+    "nombre":"Metro Feria El Guarda",
+    "telefono":"22160250"
+  },
+  {
+    "nombre":"Mariscal",
+    "telefono":"25065350"
+  },
+  {
+    "nombre":"Aguilar Batres",
+    "telefono":"24994200"
+  },
+  {
+    "nombre":"Ciudad San Cristóbal",
+    "telefono":"25014200"
+  },
+  {
+    "nombre":"Comercial San Cristóbal",
+    "telefono":"22706000"
+  },
+  {
+    "nombre":"Aguilar Batres III",
+    "telefono":"24987700"
+  },
+  {
+    "nombre":"Mix San Cristobal",
+    "telefono":"22706300"
+  },
+  {
+    "nombre":"Centra Sur",
+    "telefono":"24907500"
+  },
+  {
+    "nombre":"Pacific Center",
+    "telefono":"22136600"
+  },
+  {
+    "nombre":"San Kris Mall",
+    "telefono":"25062150"
+  },
+  {
+    "nombre":"San Lucas",
+    "telefono":"79611900"
+  },
+  {
+    "nombre":"Las Puertas San Lucas",
+    "telefono":"79630150"
+  },
+  {
+    "nombre":"Villa Nueva",
+    "telefono":"66451000"
+  },
+  {
+    "nombre":"Walmart Villa Nueva",
+    "telefono":"66356085"
+  },
+  {
+    "nombre":"Metrocentro",
+    "telefono":"66636550"
+  },
+  {
+    "nombre":"Colinas De Monte Maria",
+    "telefono":"24604285"
+  },
+  {
+    "nombre":"Comercial Villa Nueva",
+    "telefono":"66636650"
+  },
+  {
+    "nombre":"Pradera Linda Vista",
+    "telefono":"66702450"
+  },
+  {
+    "nombre":"Pradera Villa Nueva",
+    "telefono":"66646300"
+  },
+  {
+    "nombre":"Planes de Barcenas",
+    "telefono":"66709100"
+  },
+  {
+    "nombre":"Santa Clara",
+    "telefono":"66445850"
+  },
+  {
+    "nombre":"Amatitlan",
+    "telefono":"66454950"
+  },
+  {
+    "nombre":"Flor Del Campo",
+    "telefono":"66646250"
+  },
+  {
+    "nombre":"Flores Del Lago Amatitlán",
+    "telefono":"66651600"
+  },
+  {
+    "nombre":"Roosevelt",
+    "telefono":"22452800"
+  },
+  {
+    "nombre":"Tikal Futura",
+    "telefono":"25013500"
+  },
+  {
+    "nombre":"Walmart Roosevelt",
+    "telefono":"24742603"
+  },
+  {
+    "nombre":"Galerías Miraflores",
+    "telefono":"24987850"
+  },
+  {
+    "nombre":"Plaza Primma",
+    "telefono":"25013200"
+  },
+  {
+    "nombre":"Escala Roosevelt",
+    "telefono":"25014000"
+  },
+  {
+    "nombre":"Roosevelt IV",
+    "telefono":"22706100"
+  },
+  {
+    "nombre":"Plaza Madero Roosevelt",
+    "telefono":"22179600"
+  },
+  {
+    "nombre":"Peri Roosevelt",
+    "telefono":"22140300"
+  },
+  {
+    "nombre":"El Encinal",
+    "telefono":"24629950"
+  },
+  {
+    "nombre":"Majadas Once",
+    "telefono":"22100400"
+  },
+  {
+    "nombre":"Zona 1 Eegsa",
+    "telefono":"22204691"
+  },
+  {
+    "nombre":"Cementos Progreso",
+    "telefono":"22864100"
+  },
+  {
+    "nombre":"Zona Portales",
+    "telefono":"22141250"
+  },
+  {
+    "nombre":"Pnud",
+    "telefono":"23843174"
+  },
+  {
+    "nombre":"Auto Sexta",
+    "telefono":"25015700"
+  },
+  {
+    "nombre":"Epa Rambla",
+    "telefono":"22286889"
+  },
+  {
+    "nombre":"EPA Carretera S",
+    "telefono":"66340014"
+  },
+  {
+    "nombre":"Zona 13 Combex",
+    "telefono":"22173850"
+  },
+  {
+    "nombre":"Renap Central",
+    "telefono":"24918000"
+  },
+  {
+    "nombre":"Gremial De Exportadores",
+    "telefono":"22173800"
+  },
+  {
+    "nombre":"Auto Petapa",
+    "telefono":"25061900"
+  },
+  {
+    "nombre":"La Brigada",
+    "telefono":"25013000"
+  },
+  {
+    "nombre":"Galileo",
+    "telefono":"22173700"
+  },
+  {
+    "nombre":"U Mariano Galvez",
+    "telefono":"25014300"
+  },
+  {
+    "nombre":"U Francisco Marroquin",
+    "telefono":"23390248"
+  },
+  {
+    "nombre":"Maya",
+    "telefono":"24203000"
+  },
+  {
+    "nombre":"Del Valle",
+    "telefono":"22247600"
+  },
+  {
+    "nombre":"Rafael Landívar",
+    "telefono":"22246950"
+  },
+  {
+    "nombre":"BI Premium Condado Concepción",
+    "telefono":"24184931"
+  },
+  {
+    "nombre":"UMG Villa Nueva",
+    "telefono":"66715150"
+  },
+  {
+    "nombre":"Puma Roosevelt",
+    "telefono":"22337349"
+  },
+  {
+    "nombre":"Guayacan",
+    "telefono":"22136650"
+  },
+  {
+    "nombre":"Novicentro",
+    "telefono":"24767306"
+  },
+  {
+    "nombre":"BI Premium Spazio",
+    "telefono":"24203000"
+  },
+  {
+    "nombre":"BI Premium Zona 14",
+    "telefono":"22594949"
+  },
+  {
+    "nombre":"BI Premium Domani",
+    "telefono":"22100300"
+  },
+  {
+    "nombre":"Unis Fraijanes",
+    "telefono":"66653700"
+  },
+  {
+    "nombre":"UFM Odontologia",
+    "telefono":"23612513"
+  },
+  {
+    "nombre":"BI Premium Roosevelt",
+    "telefono":"22121400"
+  },
+  {
+    "nombre":"BI Premium Quetzaltenango",
+    "telefono":"77675311"
+  },
+  {
+    "nombre":"BI Premium Futeca",
+    "telefono":"22705611"
+  },
+  {
+    "nombre":"Coban",
+    "telefono":"77749400"
+  },
+  {
+    "nombre":"Gran Carcha",
+    "telefono":"78840750"
+  },
+  {
+    "nombre":"Cobán QEqchi",
+    "telefono":"77936100"
+  },
+  {
+    "nombre":"Cobán Magdalena",
+    "telefono":"79570150"
+  },
+  {
+    "nombre":"Url Coban",
+    "telefono":"77923317"
+  },
+  {
+    "nombre":"Plaza del Parque",
+    "telefono":"79654450"
+  },
+  {
+    "nombre":"Paseo Candelaria",
+    "telefono":"79649500"
+  },
+  {
+    "nombre":"San Cristobal Verapaz",
+    "telefono":"77749250"
+  },
+  {
+    "nombre":"Salama",
+    "telefono":"79570200"
+  },
+  {
+    "nombre":"Tactic",
+    "telefono":"76000250"
+  },
+  {
+    "nombre":"La Tinta",
+    "telefono":"76001900"
+  },
+  {
+    "nombre":"Rabinal",
+    "telefono":"77938500"
+  },
+  {
+    "nombre":"Peten",
+    "telefono":"79572950"
+  },
+  {
+    "nombre":"Poptun",
+    "telefono":"79617550"
+  },
+  {
+    "nombre":"Fray Bartolome De Las Casas",
+    "telefono":"79565500"
+  },
+  {
+    "nombre":"Metro Plaza Mundo Maya",
+    "telefono":"79610600"
+  },
+  {
+    "nombre":"Chisec",
+    "telefono":"76000200"
+  },
+  {
+    "nombre":"Playa Grande Ixcan",
+    "telefono":"77935600"
+  },
+  {
+    "nombre":"Sayaxche",
+    "telefono":"77942200"
+  },
+  {
+    "nombre":"La Libertad",
+    "telefono":"79639100"
+  },
+  {
+    "nombre":"Asunción Mita",
+    "telefono":"79551050"
+  },
+  {
+    "nombre":"Jutiapa",
+    "telefono":"79551000"
+  },
+  {
+    "nombre":"Chiquimulilla",
+    "telefono":"79551250"
+  },
+  {
+    "nombre":"Barberena",
+    "telefono":"79551300"
+  },
+  {
+    "nombre":"Ciudad Pedro De Alvarado",
+    "telefono":"77936400"
+  },
+  {
+    "nombre":"Mataquescuintla",
+    "telefono":"77749950"
+  },
+  {
+    "nombre":"Nueva Santa Rosa",
+    "telefono":"79617700"
+  },
+  {
+    "nombre":"Moyuta",
+    "telefono":"77936350"
+  },
+  {
+    "nombre":"Metroplaza Jutiapa",
+    "telefono":"79569900"
+  },
+  {
+    "nombre":"San Rafael Las Flores",
+    "telefono":"79572850"
+  },
+  {
+    "nombre":"Jalapa II",
+    "telefono":"79329950"
+  },
+  {
+    "nombre":"Esquipulas",
+    "telefono":"79431478"
+  },
+  {
+    "nombre":"Chiquimula",
+    "telefono":"79551450"
+  },
+  {
+    "nombre":"Ipala",
+    "telefono":"77935650"
+  },
+  {
+    "nombre":"Concepción Las Minas",
+    "telefono":"77936250"
+  },
+  {
+    "nombre":"El Progreso Jutiapa",
+    "telefono":"79551100"
+  },
+  {
+    "nombre":"Pradera Chiquimula",
+    "telefono":"79617500"
+  },
+  {
+    "nombre":"Monjas Jalapa",
+    "telefono":"79551150"
+  },
+  {
+    "nombre":"Morales",
+    "telefono":"79550500"
+  },
+  {
+    "nombre":"Puerto Barrios",
+    "telefono":"79550400"
+  },
+  {
+    "nombre":"Rio Dulce",
+    "telefono":"79610950"
+  },
+  {
+    "nombre":"Santo Tomas",
+    "telefono":"77956750"
+  },
+  {
+    "nombre":"El Estor",
+    "telefono":"79635250"
+  },
+  {
+    "nombre":"Pradera Puerto Barrios",
+    "telefono":"79610800"
+  },
+  {
+    "nombre":"Los Amates",
+    "telefono":"79636950"
+  },
+  {
+    "nombre":"Zacapa",
+    "telefono":"79551350"
+  },
+  {
+    "nombre":"Gualan",
+    "telefono":"79565450"
+  },
+  {
+    "nombre":"Url Zacapa",
+    "telefono":"77958850"
+  },
+  {
+    "nombre":"Pradera Zacapa",
+    "telefono":"79641750"
+  },
+  {
+    "nombre":"Teculutan II",
+    "telefono":"79611150"
+  },
+  {
+    "nombre":"Sanarate",
+    "telefono":"79572900"
+  },
+  {
+    "nombre":"Antigua Guatemala",
+    "telefono":"79550550"
+  },
+  {
+    "nombre":"Chimaltenango",
+    "telefono":"78393376"
+  },
+  {
+    "nombre":"Pradera Chimaltenango",
+    "telefono":"79611800"
+  },
+  {
+    "nombre":"Antigua III",
+    "telefono":"79635100"
+  },
+  {
+    "nombre":"Parador Milpas Altas",
+    "telefono":"77977800"
+  },
+  {
+    "nombre":"Jocotenango",
+    "telefono":"77962600"
+  },
+  {
+    "nombre":"San Martin Jilotepeque",
+    "telefono":"77901950"
+  },
+  {
+    "nombre":"Recolección Antigua",
+    "telefono":"77906400"
+  },
+  {
+    "nombre":"Plaza Telares",
+    "telefono":"78602500"
+  },
+  {
+    "nombre":"Paseo Andaria",
+    "telefono":"79641950"
+  },
+  {
+    "nombre":"Escuintla",
+    "telefono":"77746000"
+  },
+  {
+    "nombre":"Plaza Palmeras",
+    "telefono":"77743150"
+  },
+  {
+    "nombre":"Puerto San Jose",
+    "telefono":"79550350"
+  },
+  {
+    "nombre":"Pradera Escuintla",
+    "telefono":"79611850"
+  },
+  {
+    "nombre":"Pradera Palin",
+    "telefono":"79617600"
+  },
+  {
+    "nombre":"Plaza Manantial",
+    "telefono":"78811207"
+  },
+  {
+    "nombre":"Interplaza Escuintla",
+    "telefono":"79644450"
+  },
+  {
+    "nombre":"La Rotonda Escuintla",
+    "telefono":"77908700"
+  },
+  {
+    "nombre":"Santa Lucia Cotz.",
+    "telefono":"79550300"
+  },
+  {
+    "nombre":"Pantaleón",
+    "telefono":"78825867"
+  },
+  {
+    "nombre":"Tiquisate",
+    "telefono":"79550450"
+  },
+  {
+    "nombre":"Patulul",
+    "telefono":"79550850"
+  },
+  {
+    "nombre":"La Gomera",
+    "telefono":"77977700"
+  },
+  {
+    "nombre":"Santalu",
+    "telefono":"76001950"
+  },
+  {
+    "nombre":"La Democracia Escuintla",
+    "telefono":"79649550"
+  },
+  {
+    "nombre":"San Antonio Suchitepequez",
+    "telefono":"77905550"
+  },
+  {
+    "nombre":"Mazatenango",
+    "telefono":"79550650"
+  },
+  {
+    "nombre":"Retalhuleu",
+    "telefono":"79550700"
+  },
+  {
+    "nombre":"Coatepeque",
+    "telefono":"77745950"
+  },
+  {
+    "nombre":"Xetulul",
+    "telefono":"77725748"
+  },
+  {
+    "nombre":"Trinidad Retalhuleu",
+    "telefono":"79610450"
+  },
+  {
+    "nombre":"Mazatenango II",
+    "telefono":"79610700"
+  },
+  {
+    "nombre":"Comercial Coatepeque",
+    "telefono":"79617450"
+  },
+  {
+    "nombre":"Las Américas Mazatenango",
+    "telefono":"79610650"
+  },
+  {
+    "nombre":"Colomba Costa Cuca",
+    "telefono":"77977750"
+  },
+  {
+    "nombre":"Trinidad Retalhuleu II",
+    "telefono":"77958750"
+  },
+  {
+    "nombre":"Xejuyup",
+    "telefono":"79640550"
+  },
+  {
+    "nombre":"La Trinidad Coatepeque",
+    "telefono":"79570250"
+  },
+  {
+    "nombre":"Quetzaltenango",
+    "telefono":"77745900"
+  },
+  {
+    "nombre":"Quetzaltenango II",
+    "telefono":"79550600"
+  },
+  {
+    "nombre":"Pradera Xela",
+    "telefono":"79610850"
+  },
+  {
+    "nombre":"Plaza Ciani",
+    "telefono":"77906900"
+  },
+  {
+    "nombre":"Mont Blanc",
+    "telefono":"79610400"
+  },
+  {
+    "nombre":"Central Quetzaltenango",
+    "telefono":"77936800"
+  },
+  {
+    "nombre":"Url Xela",
+    "telefono":"77631142"
+  },
+  {
+    "nombre":"Galerías Las Americas Xela",
+    "telefono":"79635300"
+  },
+  {
+    "nombre":"San Nicolas Quetzaltenango",
+    "telefono":"77744450"
+  },
+  {
+    "nombre":"U Mesoamericana Xela",
+    "telefono":"77630950"
+  },
+  {
+    "nombre":"Panajachel",
+    "telefono":"79610900"
+  },
+  {
+    "nombre":"Solola",
+    "telefono":"79639150"
+  },
+  {
+    "nombre":"Tecpan",
+    "telefono":"79329900"
+  },
+  {
+    "nombre":"Quiche",
+    "telefono":"79550900"
+  },
+  {
+    "nombre":"Chichicastenango",
+    "telefono":"79635200"
+  },
+  {
+    "nombre":"Url Quiche",
+    "telefono":"77937100"
+  },
+  {
+    "nombre":"Umg Xela",
+    "telefono":"77939350"
+  },
+  {
+    "nombre":"Nebaj",
+    "telefono":"79639650"
+  },
+  {
+    "nombre":"Joyabaj",
+    "telefono":"77904800"
+  },
+  {
+    "nombre":"Interplaza Xela",
+    "telefono":"78840450"
+  },
+  {
+    "nombre":"Totonicapan",
+    "telefono":"77749900"
+  },
+  {
+    "nombre":"San Francisco El Alto",
+    "telefono":"79620150"
+  },
+  {
+    "nombre":"Salcaja",
+    "telefono":"77900250"
+  },
+  {
+    "nombre":"Momostenango",
+    "telefono":"77906500"
+  },
+  {
+    "nombre":"San Juan Ostuncalco",
+    "telefono":"77936200"
+  },
+  {
+    "nombre":"Sibilia",
+    "telefono":"77939450"
+  },
+  {
+    "nombre":"Concepción Chiquirichapa",
+    "telefono":"77936300"
+  },
+  {
+    "nombre":"San Pedro San Marcos I",
+    "telefono":"77747250"
+  },
+  {
+    "nombre":"Tacana",
+    "telefono":"77936150"
+  },
+  {
+    "nombre":"San Marcos",
+    "telefono":"79617250"
+  },
+  {
+    "nombre":"Malacatan",
+    "telefono":"79550800"
+  },
+  {
+    "nombre":"Catarina",
+    "telefono":"79631550"
+  },
+  {
+    "nombre":"Tecun Uman",
+    "telefono":"79550750"
+  },
+  {
+    "nombre":"Tejutla",
+    "telefono":"77936700"
+  },
+  {
+    "nombre":"La Trinidad Malacatan",
+    "telefono":"77905500"
+  },
+  {
+    "nombre":"Huehuetenango",
+    "telefono":"79610300"
+  },
+  {
+    "nombre":"Soloma",
+    "telefono":"77806277"
+  },
+  {
+    "nombre":"Huehuetenango II",
+    "telefono":"77904900"
+  },
+  {
+    "nombre":"San Miguel Ixtahuacan",
+    "telefono":"77904850"
+  },
+  {
+    "nombre":"La Mesilla",
+    "telefono":"79630100"
+  },
+  {
+    "nombre":"Villa De Chiantla",
+    "telefono":"79617350"
+  },
+  {
+    "nombre":"Pradera Huehuetenango",
+    "telefono":"79617400"
+  },
+  {
+    "nombre":"Barillas",
+    "telefono":"77936500"
+  },
+  {
+    "nombre":"Jacaltenango",
+    "telefono":"77936750"
+  },
+  {
+    "nombre":"Url Huehuetenango",
+    "telefono":"77569200"
+  },
+  {
+    "nombre":"Plaza Agape",
+    "telefono":"78840700"
+  },
+  {
+    "nombre":"Aguacatan",
+    "telefono":"79630750"
+  }
+]
