@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -23,31 +23,64 @@
     .search-box {
       display: flex;
       justify-content: flex-start;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       margin-left: 40px;
+      gap: 10px;
+      align-items: center;
     }
 
     input[type="text"] {
-      width: 300px;
+      width: 320px;
       padding: 10px;
       border: 1px solid #aaa;
       border-radius: 6px;
       font-size: 16px;
+      background: #fff;
     }
 
-    .table-container {
+    .table-wrapper {
       max-width: 500px;
       margin-left: 40px;
       margin-right: auto;
       background-color: rgba(255, 255, 255, 0.9);
-      padding: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      /* Altura fija + scroll interno */
+      max-height: 480px;
+      overflow: hidden; /* oculta el borde del sticky header */
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* El header va fuera del contenedor scrolleable para que quede fijo */
+    .table-header {
+      padding: 12px 20px;
+      border-bottom: 1px solid #e5e5e5;
+      font-weight: bold;
+      color: #333;
+      background: #ffffffd9;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    /* Esta es la parte que sí scrollea */
+    .table-container {
+      overflow-y: auto;
+      /* Para evitar que el sticky del thead se salga, usamos display block en la tabla */
+      padding: 0 0 8px 0;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      background-color: #0066cc;
+      color: #fff;
+      z-index: 1;
     }
 
     th, td {
@@ -56,13 +89,8 @@
       color: #333;
     }
 
-    th {
-      background-color: #0066cc;
-      color: #fff;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f0f0f0;
+    tr:nth-child(even) td {
+      background-color: #f7f7f7;
     }
 
     .copy-phone {
@@ -88,6 +116,11 @@
       font-size: 14px;
       z-index: 1000;
     }
+
+    .count {
+      font-size: 13px;
+      color: #555;
+    }
   </style>
 </head>
 <body>
@@ -96,70 +129,95 @@
 
   <div class="search-box">
     <input type="text" id="searchInput" placeholder="Buscar por nombre o teléfono...">
+    <span class="count" id="countLabel">Mostrando 0</span>
   </div>
 
-  <div class="table-container">
-    <table id="contactTable">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Teléfono</th>
-        </tr>
-      </thead>
-      <tbody id="contactBody">
-        <!-- Se insertan aquí los contactos -->
-      </tbody>
-    </table>
+  <div class="table-wrapper">
+    <div class="table-header">Contactos</div>
+    <div class="table-container">
+      <table id="contactTable">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+          </tr>
+        </thead>
+        <tbody id="contactBody">
+          <!-- Se insertan aquí los contactos -->
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <div id="mensajeCopiado">📋 Teléfono copiado al portapapeles</div>
 
   <script>
     const input = document.getElementById("searchInput");
+    const tbody = document.getElementById("contactBody");
+    const countLabel = document.getElementById("countLabel");
+    let contactos = [];
 
     // Cargar datos desde contactos.json
     fetch('contactos.json')
       .then(response => response.json())
       .then(data => {
-        const tbody = document.getElementById("contactBody");
-        data.forEach(contacto => {
-          const tr = document.createElement("tr");
-          tr.innerHTML = `
-            <td>${contacto.nombre}</td>
-            <td><span class="copy-phone" onclick="copiarTelefono('${contacto.telefono}')">${contacto.telefono}</span></td>
-          `;
-          tbody.appendChild(tr);
-        });
+        contactos = data || [];
+        render(contactos);
       });
+
+    // Render con actualización de contador
+    function render(list) {
+      tbody.innerHTML = "";
+      list.forEach(contacto => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${contacto.nombre}</td>
+          <td><span class="copy-phone" onclick="copiarTelefono('${contacto.telefono}')">${contacto.telefono}</span></td>
+        `;
+        tbody.appendChild(tr);
+      });
+      countLabel.textContent = `Mostrando ${list.length}`;
+    }
 
     // Buscar
     input.addEventListener("keyup", function () {
-      const filter = input.value.toLowerCase();
-      const rows = document.querySelectorAll("#contactTable tbody tr");
-
-      rows.forEach(row => {
-        const text = row.textContent.toLowerCase();
-        row.style.display = text.includes(filter) ? "" : "none";
-      });
+      const filter = input.value.toLowerCase().trim();
+      if (!filter) {
+        render(contactos);
+        return;
+      }
+      const filtrados = contactos.filter(c =>
+        (c.nombre || "").toLowerCase().includes(filter) ||
+        (c.telefono || "").toLowerCase().includes(filter)
+      );
+      render(filtrados);
     });
 
-    // Función compatible para copiar y mostrar banner
+    // Copiar al portapapeles (usa API moderna si está disponible)
     function copiarTelefono(numero) {
-      const inputTemp = document.createElement("input");
-      inputTemp.value = numero;
-      document.body.appendChild(inputTemp);
-      inputTemp.select();
-      inputTemp.setSelectionRange(0, 99999);
-      document.execCommand("copy");
-      document.body.removeChild(inputTemp);
+      const copiar = async () => {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(numero);
+        } else {
+          const inputTemp = document.createElement("input");
+          inputTemp.value = numero;
+          document.body.appendChild(inputTemp);
+          inputTemp.select();
+          inputTemp.setSelectionRange(0, 99999);
+          document.execCommand("copy");
+          document.body.removeChild(inputTemp);
+        }
+      };
 
-      // Mostrar mensaje visual
-      const mensaje = document.getElementById("mensajeCopiado");
-      mensaje.style.display = "block";
-      setTimeout(() => {
-        mensaje.style.display = "none";
-      }, 2000);
+      copiar().then(() => {
+        const mensaje = document.getElementById("mensajeCopiado");
+        mensaje.style.display = "block";
+        setTimeout(() => { mensaje.style.display = "none"; }, 2000);
+      });
     }
+
+    // Exponer la función al scope global para el onclick inline
+    window.copiarTelefono = copiarTelefono;
   </script>
 
 </body>
