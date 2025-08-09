@@ -14,63 +14,122 @@
       background-size: 150px;
       background-attachment: fixed;
     }
-    h2 { color:#222; margin-left:40px; }
 
-    .toolbar, .search-box { display:flex; align-items:center; gap:10px; margin-left:40px; margin-bottom:16px; }
-    input[type="text"]{ width:360px; padding:10px; border:1px solid #aaa; border-radius:6px; font-size:16px; background:#fff; }
-    .count{ font-size:13px; color:#555; }
-
-    .table-wrapper{
-      margin-left:40px; margin-right:auto; max-width:960px;
-      background:rgba(255,255,255,0.92); border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2);
-      max-height:540px; display:flex; flex-direction:column; overflow:hidden;
-    }
-    .table-header{ padding:12px 20px; border-bottom:1px solid #e5e5e5; font-weight:600; color:#333; background:#ffffffd9; }
-    .table-container{ overflow-y:auto; }
-    table{ width:100%; border-collapse:collapse; }
-    thead th{ position:sticky; top:0; background:#0066cc; color:#fff; z-index:1; }
-    th, td{ padding:12px; text-align:left; color:#333; vertical-align:top; }
-    tbody tr:nth-child(even) td{ background:#f7f7f7; }
-
-    .link-name{ color:#0066cc; cursor:pointer; text-decoration:underline; }
-    .copyable{ cursor:pointer; text-decoration:underline; }
-
-    #mensajeCopiado{
-      position:fixed; bottom:20px; left:20px; background:#0066cc; color:#fff;
-      padding:10px 20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.3);
-      display:none; font-size:14px; z-index:1000;
+    h2 {
+      color: #222;
+      margin-left: 40px;
     }
 
-    /* Modal */
-    .modal-backdrop{
-      position:fixed; inset:0; background:rgba(0,0,0,.35);
-      display:none; align-items:center; justify-content:center; z-index:2000;
+    .search-box {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 16px;
+      margin-left: 40px;
+      gap: 10px;
+      align-items: center;
     }
-    .modal{
-      width:min(90vw, 760px); max-height:80vh; overflow:auto;
-      background:#fff; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+    input[type="text"] {
+      width: 320px;
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      font-size: 16px;
+      background: #fff;
     }
-    .modal-header{ display:flex; justify-content:space-between; align-items:center; padding:14px 18px; border-bottom:1px solid #eee; }
-    .modal-title{ font-size:18px; font-weight:700; color:#222; }
-    .modal-close{ border:none; background:#f4f4f4; padding:6px 10px; border-radius:6px; cursor:pointer; }
-    .modal-body{ padding:16px 18px; }
-    .grid{
-      display:grid; grid-template-columns: 200px 1fr; gap:10px 16px;
+
+    .table-wrapper {
+      max-width: 500px;
+      margin-left: 40px;
+      margin-right: auto;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      /* Altura fija + scroll interno */
+      max-height: 480px;
+      overflow: hidden; /* oculta el borde del sticky header */
+      display: flex;
+      flex-direction: column;
     }
-    .label{ font-weight:600; color:#444; }
-    .value{ color:#222; }
-    .value .copy{ margin-left:6px; font-size:12px; color:#0066cc; text-decoration:underline; cursor:pointer; }
+
+    /* El header va fuera del contenedor scrolleable para que quede fijo */
+    .table-header {
+      padding: 12px 20px;
+      border-bottom: 1px solid #e5e5e5;
+      font-weight: bold;
+      color: #333;
+      background: #ffffffd9;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    /* Esta es la parte que sí scrollea */
+    .table-container {
+      overflow-y: auto;
+      /* Para evitar que el sticky del thead se salga, usamos display block en la tabla */
+      padding: 0 0 8px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      background-color: #0066cc;
+      color: #fff;
+      z-index: 1;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      color: #333;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f7f7f7;
+    }
+
+    .copy-phone {
+      color: #0066cc;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .copy-phone:hover {
+      color: #004080;
+    }
+
+    #mensajeCopiado {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      display: none;
+      font-size: 14px;
+      z-index: 1000;
+    }
+
+    .count {
+      font-size: 13px;
+      color: #555;
+    }
   </style>
 </head>
 <body>
+
   <h2>Directorio Agencias</h2>
 
-  <div class="toolbar">
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Buscar en todas las columnas...">
-      <span class="count" id="countLabel">Mostrando 0</span>
-    </div>
-    <a class="count" href="contactos.json" download>Descargar JSON</a>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Buscar por nombre o teléfono...">
+    <span class="count" id="countLabel">Mostrando 0</span>
   </div>
 
   <div class="table-wrapper">
@@ -79,175 +138,87 @@
       <table id="contactTable">
         <thead>
           <tr>
-            <th id="thNombre">Nombre</th>
-            <th id="thTelefono">Teléfono</th>
+            <th>Nombre</th>
+            <th>Teléfono</th>
           </tr>
         </thead>
-        <tbody id="contactBody"></tbody>
+        <tbody id="contactBody">
+          <!-- Se insertan aquí los contactos -->
+        </tbody>
       </table>
     </div>
   </div>
 
-  <div id="mensajeCopiado">📋 Copiado al portapapeles</div>
-
-  <!-- Modal -->
-  <div class="modal-backdrop" id="backdrop" onclick="cerrarModal(event)">
-    <div class="modal" role="dialog" aria-modal="true" onclick="event.stopPropagation()">
-      <div class="modal-header">
-        <div class="modal-title" id="modalTitle">Detalle</div>
-        <button class="modal-close" onclick="cerrarModal()">Cerrar ✕</button>
-      </div>
-      <div class="modal-body">
-        <div class="grid" id="detailGrid"></div>
-      </div>
-    </div>
-  </div>
+  <div id="mensajeCopiado">📋 Teléfono copiado al portapapeles</div>
 
   <script>
-    const tbody = document.getElementById("contactBody");
     const input = document.getElementById("searchInput");
+    const tbody = document.getElementById("contactBody");
     const countLabel = document.getElementById("countLabel");
+    let contactos = [];
 
-    let registros = [];    // Todo el dataset (objetos con TODOS los campos)
-    let cols = [];         // Lista de columnas detectadas
-    let nombreKey = null;  // Columna para mostrar como "Nombre"
-    let telKey = null;     // Columna para mostrar como "Teléfono"
-
-    // Heurísticas de columnas
-    const isNombre = (h) => /^(nombre|name|contacto|agencia|sucursal|persona)/i.test(h);
-    const isTelefono = (h) => /^(tel|teléfono|telefono|phone|cel|mobile|móvil|movil)/i.test(h);
-
-    // Cargar contactos.json
+    // Cargar datos desde contactos.json
     fetch('contactos.json')
-      .then(r => r.json())
+      .then(response => response.json())
       .then(data => {
-        if (!Array.isArray(data)) throw new Error("JSON no es una lista");
-        registros = data;
-
-        // Detectar columnas
-        const first = registros.find(r => r && typeof r === 'object') || {};
-        cols = Array.from(new Set(
-          Object.keys(first)
-          .concat(...registros.map(o => Object.keys(o || {})))
-        ));
-
-        // Normalizar: asegurar strings
-        registros = registros.map(o => {
-          const n = {};
-          cols.forEach(k => n[k] = (o[k] ?? "").toString());
-          return n;
-        });
-
-        // Elegir columnas principales
-        nombreKey = cols.find(isNombre) || cols[0] || "Nombre";
-        telKey    = cols.find(isTelefono) || cols[1] || "";
-
-        // Actualizar encabezados si no existen
-        document.getElementById("thNombre").textContent = nombreKey || "Nombre";
-        document.getElementById("thTelefono").textContent = telKey || "Teléfono";
-
-        render(registros);
-      })
-      .catch(err => {
-        console.error(err);
-        tbody.innerHTML = '<tr><td colspan="2">No se pudo cargar contactos.json</td></tr>';
+        contactos = data || [];
+        render(contactos);
       });
 
-    // Render tabla (dos columnas principales) + contador
+    // Render con actualización de contador
     function render(list) {
       tbody.innerHTML = "";
-      list.forEach((row, idx) => {
+      list.forEach(contacto => {
         const tr = document.createElement("tr");
-
-        // Columna nombre: clic abre modal con todo
-        const vNombre = (row[nombreKey] || "").toString();
-        const tdNombre = document.createElement("td");
-        tdNombre.innerHTML = `<span class="link-name" data-idx="${idx}">${vNombre || "[sin nombre]"}</span>`;
-        tdNombre.addEventListener("click", () => abrirModal(row));
-        tr.appendChild(tdNombre);
-
-        // Columna teléfono (si hay)
-        const vTel = (telKey && row[telKey]) ? row[telKey] : "";
-        const tdTel = document.createElement("td");
-        if (vTel) {
-          tdTel.innerHTML = `<span class="copyable" title="Copiar">${vTel}</span>`;
-          tdTel.addEventListener("click", () => copiarTexto(vTel));
-        } else {
-          tdTel.textContent = "";
-        }
-        tr.appendChild(tdTel);
-
+        tr.innerHTML = `
+          <td>${contacto.nombre}</td>
+          <td><span class="copy-phone" onclick="copiarTelefono('${contacto.telefono}')">${contacto.telefono}</span></td>
+        `;
         tbody.appendChild(tr);
       });
       countLabel.textContent = `Mostrando ${list.length}`;
     }
 
-    // Búsqueda en todas las columnas
-    input.addEventListener("keyup", () => {
-      const f = input.value.toLowerCase().trim();
-      if (!f) { render(registros); return; }
-      const filtrados = registros.filter(o =>
-        cols.some(k => (o[k] || "").toLowerCase().includes(f))
+    // Buscar
+    input.addEventListener("keyup", function () {
+      const filter = input.value.toLowerCase().trim();
+      if (!filter) {
+        render(contactos);
+        return;
+      }
+      const filtrados = contactos.filter(c =>
+        (c.nombre || "").toLowerCase().includes(filter) ||
+        (c.telefono || "").toLowerCase().includes(filter)
       );
       render(filtrados);
     });
 
-    // Modal de detalle
-    function abrirModal(row) {
-      document.getElementById("modalTitle").textContent = row[nombreKey] || "Detalle";
-      const grid = document.getElementById("detailGrid");
-      grid.innerHTML = "";
-
-      cols.forEach(k => {
-        const label = document.createElement("div");
-        label.className = "label";
-        label.textContent = k;
-
-        const value = document.createElement("div");
-        value.className = "value";
-        const text = (row[k] || "").toString();
-        value.innerHTML = text
-          ? `${escapeHtml(text)} <span class="copy" title="Copiar" onclick="copiarTexto(\`${escapeTemplate(text)}\`)">Copiar</span>`
-          : '<span style="color:#888;">—</span>';
-
-        grid.appendChild(label);
-        grid.appendChild(value);
-      });
-
-      document.getElementById("backdrop").style.display = "flex";
-    }
-
-    function cerrarModal(ev){
-      if (ev && ev.target && ev.target.id !== "backdrop") {
-        // click interno, ignorar
-      }
-      document.getElementById("backdrop").style.display = "none";
-    }
-
-    // Copiar y banner
-    async function copiarTexto(txt) {
-      try {
+    // Copiar al portapapeles (usa API moderna si está disponible)
+    function copiarTelefono(numero) {
+      const copiar = async () => {
         if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(txt);
+          await navigator.clipboard.writeText(numero);
         } else {
-          const tmp = document.createElement("input");
-          tmp.value = txt; document.body.appendChild(tmp);
-          tmp.select(); document.execCommand("copy"); tmp.remove();
+          const inputTemp = document.createElement("input");
+          inputTemp.value = numero;
+          document.body.appendChild(inputTemp);
+          inputTemp.select();
+          inputTemp.setSelectionRange(0, 99999);
+          document.execCommand("copy");
+          document.body.removeChild(inputTemp);
         }
-        const msg = document.getElementById("mensajeCopiado");
-        msg.style.display = "block";
-        setTimeout(() => msg.style.display = "none", 1800);
-      } catch(e){ alert("No se pudo copiar."); }
-    }
-    window.copiarTexto = copiarTexto;
+      };
 
-    // Helpers para escapar HTML / template literals
-    function escapeHtml(s) {
-      return s.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+      copiar().then(() => {
+        const mensaje = document.getElementById("mensajeCopiado");
+        mensaje.style.display = "block";
+        setTimeout(() => { mensaje.style.display = "none"; }, 2000);
+      });
     }
-    function escapeTemplate(s) {
-      return s.replace(/[`\\$]/g, m => '\\' + m).replace(/\n/g, '\\n');
-    }
+
+    // Exponer la función al scope global para el onclick inline
+    window.copiarTelefono = copiarTelefono;
   </script>
+
 </body>
 </html>
