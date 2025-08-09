@@ -172,7 +172,7 @@
         const tr = document.createElement("tr");
         tr.innerHTML = `
           <td>${contacto.nombre}</td>
-          <td><span class="copy-phone" onclick="copiarTelefono('${contacto.telefono}')">${contacto.telefono}</span></td>
+          <td><span class="copy-phone" onclick="copiarTelefono('051${contacto.telefono}')">${contacto.telefono}</span></td>
         `;
         tbody.appendChild(tr);
       });
